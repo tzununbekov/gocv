@@ -112,6 +112,7 @@ func (d *SURF) DetectAndCompute(src gocv.Mat, mask gocv.Mat) ([]gocv.KeyPoint, g
 func getKeyPoints(ret C.KeyPoints) []gocv.KeyPoint {
 	cArray := ret.keypoints
 	length := int(ret.length)
+	defer C.free(unsafe.Pointer(cArray))
 	hdr := reflect.SliceHeader{
 		Data: uintptr(unsafe.Pointer(cArray)),
 		Len:  length,
