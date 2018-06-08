@@ -152,9 +152,15 @@ Now, download the OpenCV 3.4.1 and OpenCV Contrib source code:
 
 #### Build
 
-Build and install everything. This will take quite a while:
+Build OpenCV from source code. This will take quite a while:
 
 	make build
+
+#### Install
+
+Install everything:
+
+	make sudo_install
 
 #### Cleanup extra files
 

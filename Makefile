@@ -36,7 +36,7 @@ deps_fedora:
 
 deps_debian:
 	sudo apt-get update
-	sudo apt-get install $(DEBS)
+	sudo apt-get install -y $(DEBS)
 
 
 # Download OpenCV source tarballs.
